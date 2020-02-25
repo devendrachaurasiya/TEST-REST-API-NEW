@@ -16,10 +16,7 @@ app.secret_key = 'aadi'
 jwt = JWT(app, authenticate, identity)
 api = Api(app)
 
-# flask decorator
-@app.before_first_request
-def create_table():
-    db.create_all()
+
 
 
 
